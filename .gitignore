@@ -46,3 +46,4 @@ impl/
 *.vcd
 *.fst
 *.out
+legacy
