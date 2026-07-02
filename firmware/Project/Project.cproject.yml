@@ -1,0 +1,60 @@
+# A project translates into one executable or library.
+project:
+
+  groups:
+    - group: scr
+      files:
+        - file: CAN.c
+        - file: configuration.c
+        - file: fpga_test.c
+        - file: gd32f10x_it.c
+        - file: rtos_v1.c
+        - file: spi_fpga.c
+        - file: timer.c
+        - file: main.c
+        - file: CAN.h
+        - file: configuration.h
+        - file: fpga_test.h
+        - file: gd32f10x_it.h
+        - file: pin.h
+        - file: rtos_v1.h
+        - file: spi_fpga.h
+        - file: timer.h
+        - file: Project.cproject.yml
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:Startup
+    - component: Device:GD32F10x_StdPeripherals:ADC
+    - component: Device:GD32F10x_StdPeripherals:BKP
+    - component: Device:GD32F10x_StdPeripherals:CAN
+    - component: Device:GD32F10x_StdPeripherals:CRC
+    - component: Device:GD32F10x_StdPeripherals:DAC
+    - component: Device:GD32F10x_StdPeripherals:DBG
+    - component: Device:GD32F10x_StdPeripherals:DMA
+    - component: Device:GD32F10x_StdPeripherals:ENET
+    - component: Device:GD32F10x_StdPeripherals:EXMC
+    - component: Device:GD32F10x_StdPeripherals:EXTI
+    - component: Device:GD32F10x_StdPeripherals:FMC
+    - component: Device:GD32F10x_StdPeripherals:FWDGT
+    - component: Device:GD32F10x_StdPeripherals:GPIO
+    - component: Device:GD32F10x_StdPeripherals:I2C
+    - component: Device:GD32F10x_StdPeripherals:MISC
+    - component: Device:GD32F10x_StdPeripherals:PMU
+    - component: Device:GD32F10x_StdPeripherals:RCU
+    - component: Device:GD32F10x_StdPeripherals:RTC
+    - component: Device:GD32F10x_StdPeripherals:SDIO
+    - component: Device:GD32F10x_StdPeripherals:SPI_I2S
+    - component: Device:GD32F10x_libopt
+    - component: Device:GD32F10x_StdPeripherals:TIMER
+    - component: Device:GD32F10x_StdPeripherals:USART
+    - component: Device:GD32F10x_StdPeripherals:WWDGT
+
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - hex
+      - map
