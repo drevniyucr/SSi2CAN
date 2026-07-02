@@ -13,9 +13,9 @@
 ## Как это работает
 
 ```text
-   ┌─────────────┐     SSI ×8     ┌──────────────────────┐   SPI Mode 0     ┌──────────────┐  CAN
-   │  Энкодеры   │ ──CLK/DATA──▶ │ FPGA (encoder_hub)    │◀──────────────▶│   GD32F103    │◀─────▶ шина
-   │ (абсолютн.) │                │ SSI-мастер + SPI-slv │   позиции/CRC    │  (firmware)   │        (0x40)
+   ┌─────────────┐    SSI ×8      ┌──────────────────────┐   SPI Mode 0     ┌──────────────┐  CAN
+   │  Энкодеры   │ ──CLK/DATA──▶ │ FPGA (encoder_hub)    │◀──────────────▶│   GD32F103   │◀─────▶ шина
+   │ (абсолютн.) │                │ SSI-мастер + SPI-slv │   позиции/CRC    │  (firmware)  │        (0x40)
    └─────────────┘                └──────────────────────┘                  └──────────────┘
 ```
 
@@ -44,9 +44,8 @@ soft/
 │       ├── spi_slave.sv        SPI Mode 0 slave
 │       ├── encoder_hub_tb.sv   testbench (iverilog)
 │       ├── encoder_hub.cst     ограничения пинов
-│       ├── encoder_hub.sdc     временные ограничения
-│       ├── gowin_rpll/         IP PLL (Gowin)
-│       └── legacy/             ранние эксперименты (не участвуют в сборке)
+│       ├── encoder_hub.sdc     временные ограничения  
+│       └── gowin_rpll/         IP PLL (Gowin)
 │
 ├── firmware/                   Прошивка GD32 (CMSIS-Toolbox / csolution)
 │   ├── firmware.csolution.yml  решение (target GD32F103RB, компиляторы)
