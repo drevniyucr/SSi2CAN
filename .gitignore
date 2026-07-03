@@ -47,3 +47,4 @@ impl/
 *.fst
 *.out
 legacy
+build
