@@ -32,9 +32,9 @@ solution:
           images:
             - project-context: Project.Debug
           debugger:
-            name: ST-Link@Arm-Debugger
-            clock-armdbg: auto
-            protocol-armdbg: auto
+            name: ST-Link@pyOCD
+            clock: 4000000
+            protocol: swd
 
   # List of different build configurations.
   build-types:

@@ -4,5 +4,17 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"debug.hideSlowPreLaunchWarning": true,
+		"debug.showInStatusBar": "never",
+		"memory-inspector.addressPadding": "32bit",
+		"memory-inspector.groupings.groupsPerRow": "Autofit",
+		"memory-inspector.groupings.MAUsPerGroup": 4,
+		"memory-inspector.scrollingBehavior": "Auto-Append",
+		"clangd.arguments": [
+			"--compile-commands-dir=c:\\Users\\AkimovMA\\Desktop\\DIP_SEM\\Module-SRL-8SSI-CAN-V1.0\\soft\\firmware\\out\\Project\\GD32F103RB\\Debug"
+		],
+		"cmsis-csolution.autoDebugLaunch": true,
+		"peripheral-inspector.periodicRefreshMode": "off"
+	}
 }
